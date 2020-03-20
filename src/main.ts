@@ -1,1 +1,1 @@
-console.log(`Welcome to a fresh Screeps Repo.`)
+console.log(`Welcome to a fresh Screeps Repo.`);
