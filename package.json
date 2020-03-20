@@ -1,6 +1,7 @@
 {
 	"name": "screeps-typescript",
 	"description": "A TypeScript Screeps Repo",
+	"license": "MIT",
 	"main": "index.js",
 	"scripts": {
 		"lint": "tslint -p tsconfig.json \"src/**/*.ts\"",
