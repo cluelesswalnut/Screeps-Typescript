@@ -6,9 +6,9 @@
 	"scripts": {
 		"lint": "tslint -p tsconfig.json \"src/**/*.ts\"",
 		"build": "rollup -c",
-		"push-main": "rollup -c --environment DEST:main",
-		"push-pserver": "rollup -c --environment DEST:pserver",
-		"push-sim": "rollup -c --environment DEST:sim"
+		"main": "rollup -c --environment DEST:main",
+		"pserver": "rollup -c --environment DEST:pserver",
+		"sim": "rollup -c --environment DEST:sim"
 	},
 	"devDependencies": {
 		"@types/lodash": "^3.10.1",
@@ -29,7 +29,7 @@
 		"tslint": "^5.9.1",
 		"tslint-config-prettier": "^1.14.0",
 		"tslint-plugin-prettier": "^1.3.0",
-		"typescript": "^2.9.2"
+		"typescript": "^3.8.3"
 	},
 	"dependencies": {
 		"source-map": "~0.6.1"
