@@ -6,15 +6,6 @@ const calcUpgradeTasksNeeded = (controllerSpots: number, controllerDistance: num
 	return Math.round((controllerSpots * controllerDistance) / 20);
 };
 
-interface RoomNeeds {
-	energySources: number;
-	energySpots: number;
-	energySourceDistance: number;
-	controllerSpots: number;
-	controllerDistance: number;
-	availableEnergy: number;
-}
-
 const calcTasksNeeded = (roomNeeds: RoomNeeds) => {
 	const { energySpots, energySourceDistance, controllerSpots, controllerDistance } = roomNeeds;
 

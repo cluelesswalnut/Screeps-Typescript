@@ -1,18 +1,9 @@
-import generateBodyParts from './generateBodyParts';
-import generateName from './generateName';
-import generateOptions from './generateOptions';
 import harvest from 'tasks/harvest';
 import upgrade from 'tasks/harvest';
 
-interface TasksNeeded {
-	harvest?: number;
-	upgrade?: number;
-	build?: number;
-	mine?: number;
-	repair?: number;
-}
+const runCreeps = (originRoomName: string) => {
+	const roomCreeps: Creep[] = _.filter(Game.creeps, x => x.memory.originRoomName === originRoomName);
 
-const runCreeps = (roomCreeps: Creep[]) => {
 	for (let creep of roomCreeps) {
 		switch (creep.memory.task) {
 			case `harvest`:
