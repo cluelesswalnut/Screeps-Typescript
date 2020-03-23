@@ -6,6 +6,7 @@
 		"interface-name": [true, "never-prefix"],
 		"member-ordering": [false],
 		"no-console": [false],
+		"noImplicitReturns": false,
 		"no-namespace": [true, "allow-declarations"],
 		"variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case", "allow-leading-underscore"]
 	}

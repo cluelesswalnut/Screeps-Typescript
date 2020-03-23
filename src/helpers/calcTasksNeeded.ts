@@ -1,5 +1,5 @@
 const calcHarvestTasksNeeded = (energySpots: number, energySourceDistance: number) => {
-	return Math.round((energySpots * energySourceDistance) / 70);
+	return Math.round((energySpots * energySourceDistance) / 50);
 };
 
 const calcUpgradeTasksNeeded = (controllerSpots: number, controllerDistance: number) => {

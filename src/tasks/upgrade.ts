@@ -14,33 +14,33 @@ const upgrade = (creep: Creep) => {
 		creep.memory.working = false;
 		creep.say('\u{267B}'); // recycle emojii unicode
 	}
-	// State 1: Creep does not working, is not at filled structure -> Move to it
+	// State 1: Creep is not working, is not at filled structure -> Move to it
 	if (!working && filledStructure != null && !creep.pos.isNearTo(filledStructure)) {
 		creep.moveTo(filledStructure, {
 			visualizePathStyle: {
 				stroke: '#ffffff',
 			},
 		});
-		return OK;
+		return
 	}
-	// State 2: Creep does not working, is at filled structure -> Withdraw energy
+	// State 2: Creep is not working, is at filled structure -> Withdraw energy
 	if (!working && filledStructure != null && creep.pos.isNearTo(filledStructure)) {
 		creep.withdraw(filledStructure, RESOURCE_ENERGY);
-		return OK;
+		return
 	}
-	// State 3: Creep does working, is not at controller -> Move to it
+	// State 3: Creep is working, is not at controller -> Move to it
 	if (working && controller != null && !creep.pos.inRangeTo(controller, 3)) {
-		creep.moveTo(creep.room.controller, {
+		creep.moveTo(controller, {
 			visualizePathStyle: {
 				stroke: '#ffaa00',
 			},
 		});
-		return OK;
+		return
 	}
-	// State 4: Creep does working, is at controller -> Upgrade it
+	// State 4: Creep is working, is at controller -> Upgrade it
 	if (working && controller != null && creep.pos.inRangeTo(controller, 3)) {
-		creep.upgradeController(creep.room.controller);
-		return OK;
+		creep.upgradeController(controller);
+		return
 	}
 };
 

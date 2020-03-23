@@ -1,5 +1,5 @@
 import harvest from 'tasks/harvest';
-import upgrade from 'tasks/harvest';
+import upgrade from 'tasks/upgrade';
 
 const runCreeps = (originRoomName: string) => {
 	const roomCreeps: Creep[] = _.filter(Game.creeps, x => x.memory.originRoomName === originRoomName);
@@ -13,7 +13,7 @@ const runCreeps = (originRoomName: string) => {
 				upgrade(creep);
 				break;
 			default:
-				console.log(`There was an error running a room's creeps' tasks.`);
+				console.log(`There was an Error running a room's creeps' tasks.`);
 				throw Error;
 		}
 	}

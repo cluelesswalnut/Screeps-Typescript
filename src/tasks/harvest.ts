@@ -19,32 +19,32 @@ const harvest = (creep: Creep) => {
 		creep.say('\u{26CF}'); // pick emojii unicode
 	}
 	// State 1: Creep does not working, not at source -> Move to closest one
-	if (!working && source != null && !creep.pos.isNearTo(source)) {
+	if (!working && source && !creep.pos.isNearTo(source)) {
 		creep.moveTo(source, {
 			visualizePathStyle: {
 				stroke: '#ffffff',
 			},
 		});
-		return OK;
+		return;
 	}
 	// State 2: Creep does not working, is at source -> Harvest it
-	if (!working && source != null && creep.pos.isNearTo(source)) {
+	if (!working && source && creep.pos.isNearTo(source)) {
 		creep.harvest(source);
-		return OK;
+		return;
 	}
 	// State 3: Creep does working, is not at unfilled structure -> Move to unfilled structure
-	if (working && unfilledStructure != null && !creep.pos.isNearTo(unfilledStructure)) {
+	if (working && unfilledStructure && !creep.pos.isNearTo(unfilledStructure)) {
 		creep.moveTo(unfilledStructure, {
 			visualizePathStyle: {
 				stroke: '#ffaa00',
 			},
 		});
-		return OK;
+		return;
 	}
 	// State 4: Creep does working, is at unfilled structure -> Transfer energy to unfilled structure
-	if (working && unfilledStructure != null && creep.pos.isNearTo(unfilledStructure)) {
+	if (working && unfilledStructure && creep.pos.isNearTo(unfilledStructure)) {
 		creep.transfer(unfilledStructure, RESOURCE_ENERGY);
-		return OK;
+		return;
 	}
 };
 
