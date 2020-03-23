@@ -16,5 +16,8 @@ for (let originRoomName of originRoomNames) {
 		case 6:
 		case 7:
 		case 8:
+		default:
+			console.log(`There was an error running the rooms.`);
+			throw Error;
 	}
 }
