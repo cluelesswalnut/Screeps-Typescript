@@ -8,6 +8,8 @@ for (let originRoomName of originRoomNames) {
 			overlordOne(originRoomName, RCL);
 			break;
 		case 2:
+			overlordOne(originRoomName, RCL);
+			break;
 		case 3:
 		case 4:
 		case 5:
