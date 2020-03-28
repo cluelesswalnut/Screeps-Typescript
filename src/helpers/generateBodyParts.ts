@@ -5,8 +5,7 @@ const generateBodyParts = (type: string) => {
 		case `Upgrader`:
 			return [WORK, CARRY, CARRY, MOVE, MOVE];
 		default:
-			console.log(`There was an Error generating body parts for a creep.`);
-			throw Error;
+			throw new Error(`There was an Error generating body parts for a creep.`);
 	}
 };
 

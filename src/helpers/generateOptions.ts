@@ -1,6 +1,6 @@
-const generateOptions = (originRoomName: string, initialTask: string) => {
+const generateOptions = (originRoomName: string, role: string) => {
 	return {
-		memory: { originRoomName: originRoomName, task: initialTask, working: false },
+		memory: { originRoomName: originRoomName, role, working: false },
 	};
 };
 
