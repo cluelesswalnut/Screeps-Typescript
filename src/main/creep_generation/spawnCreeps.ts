@@ -15,13 +15,13 @@ const spawnCreeps = (originRoomName: string, rolesNeeded: RolesNeeded) => {
 			Game.spawns[spawner.name].spawnCreep(
 				generateBodyParts(`Harvester`),
 				generateName(`Harvester`),
-				generateOptions(originRoomName, `harvest`),
+				generateOptions(originRoomName, `harvester`),
 			);
 		} else if (upgrade && upgraders < upgrade) {
 			Game.spawns[spawner.name].spawnCreep(
 				generateBodyParts(`Upgrader`),
 				generateName(`Upgrader`),
-				generateOptions(originRoomName, `upgrade`),
+				generateOptions(originRoomName, `upgrader`),
 			);
 		}
 	}
