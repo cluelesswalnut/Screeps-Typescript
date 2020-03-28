@@ -1,7 +1,7 @@
 // memory extension samples
 interface CreepMemory {
 	originRoomName: string;
-	task: string;
+	role: string;
 	working: boolean;
 }
 
@@ -19,7 +19,7 @@ interface RoomNeeds {
 	availableEnergy: number;
 }
 
-interface TasksNeeded {
+interface RolesNeeded {
 	harvest?: number;
 	upgrade?: number;
 	build?: number;
