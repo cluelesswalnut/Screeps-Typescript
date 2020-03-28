@@ -13,7 +13,7 @@ const runCreeps = (originRoomName: string) => {
 				upgrade(creep);
 				break;
 			default:
-				throw new Error(`There was an Error running a room's creeps.`);
+				throw new Error(`There was an Error running the creep: ${creep.name}.`);
 		}
 	}
 };
