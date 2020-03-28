@@ -6,10 +6,10 @@ const runCreeps = (originRoomName: string) => {
 
 	for (let creep of roomCreeps) {
 		switch (creep.memory.role) {
-			case `harvest`:
+			case `harvester`:
 				harvest(creep);
 				break;
-			case `upgrade`:
+			case `upgrader`:
 				upgrade(creep);
 				break;
 			default:
