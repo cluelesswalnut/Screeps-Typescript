@@ -11,7 +11,7 @@ const roomOverlord = (originRoomName: string, RCL?: number) => {
 
 	const rolesNeeded: RolesNeeded = calcRolesNeeded(RCL);
 
-	spawnCreeps(originRoomName, rolesNeeded);
+	spawnCreeps(originRoomName, rolesNeeded, RCL);
 	assignTasks(originRoomName, RCL);
 	runCreeps_tasks(originRoomName);
 };

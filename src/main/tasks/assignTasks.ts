@@ -7,7 +7,7 @@ const assignRolesLvl1 = (originRoomName: string) => {
 		}
 
 		// if energy is 0, task is mine
-		if ( creep.memory.role === 'harvester' || creep.memory.role === 'upgrader' ){
+		if ( creep.memory.role === 'harvester' || creep.memory.role === 'upgrader' || creep.memory.role === 'builder' ){
 			if ( creep.carry.energy === 0 ){
 				creep.memory.task = 'mine';
 			}
@@ -19,6 +19,8 @@ const assignRolesLvl1 = (originRoomName: string) => {
 				creep.memory.task = 'deposit';
 			if (creep.memory.role === 'upgrader')
 				creep.memory.task = 'upgrade';
+			if (creep.memory.role === 'builder')
+				creep.memory.task = 'build';
 		}
 	}
 }
@@ -34,7 +36,6 @@ const assignRoles = (originRoomName: string, RCL: number) => {
 		default:
 			assignRolesLvl1(originRoomName);
 	}
-
 }
 
 

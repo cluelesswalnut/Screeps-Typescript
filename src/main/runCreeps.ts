@@ -22,6 +22,7 @@ const runCreeps = (originRoomName: string) => {
 import mine from './tasks/mine'
 import deposit from './tasks/deposit'
 import upgrade2 from './tasks/upgrade'
+import build from './tasks/build'
 
 const runCreeps_tasks = (originRoomName: string) => {
 	const roomCreeps: Creep[] = _.filter(Game.creeps, x => x.memory.originRoomName === originRoomName);
@@ -36,7 +37,10 @@ const runCreeps_tasks = (originRoomName: string) => {
 				break;
 			case 'upgrade':
 				upgrade2(creep);
-					break;
+				break;
+			case 'build':
+				build(creep);
+				break;
 			default:
 				throw new Error(`There was an Error running the creep: ${creep.name}.`);
 		}
