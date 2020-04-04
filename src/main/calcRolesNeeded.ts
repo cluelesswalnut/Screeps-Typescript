@@ -1,18 +1,36 @@
-const calcHarvestRolesNeeded = (energySpots: number, energySourceDistance: number) => {
-	return Math.round((energySpots * energySourceDistance) / 50);
-};
+const calcRolesNeeded = (RCL: number) => {
 
-const calcUpgradeRolesNeeded = (controllerSpots: number, controllerDistance: number) => {
-	return Math.round((controllerSpots * controllerDistance) / 20);
-};
+	let roles = {};
 
-const calcRolesNeeded = (roomNeeds: RoomNeeds) => {
-	const { energySpots, energySourceDistance, controllerSpots, controllerDistance } = roomNeeds;
-
-	return {
-		harvest: calcHarvestRolesNeeded(energySpots, energySourceDistance),
-		upgrade: calcUpgradeRolesNeeded(controllerSpots, controllerDistance),
-	};
+	switch (RCL){
+		case 1:
+			roles = {
+				harvest: 4,
+				upgrade: 4,
+			};
+			break;
+		case 2:
+			roles = {
+				harvest: 4,
+				upgrade: 4,
+			};
+			break;
+		case 3:
+			roles = {
+				mine: 1,
+				harvest: 2,
+				upgrade: 4,
+			};
+			break;
+		default:
+			roles = {
+				mine: 1,
+				harvest: 2,
+				upgrade: 4,
+			};
+			break;
+	}
+	return roles;
 };
 
 export default calcRolesNeeded;

@@ -11,15 +11,6 @@ interface Memory {
 	log: any;
 }
 
-interface RoomNeeds {
-	energySources: number;
-	energySpots: number;
-	energySourceDistance: number;
-	controllerSpots: number;
-	controllerDistance: number;
-	availableEnergy: number;
-}
-
 interface RolesNeeded {
 	harvest?: number;
 	upgrade?: number;
