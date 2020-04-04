@@ -3,6 +3,7 @@ interface CreepMemory {
 	originRoomName: string;
 	role: string;
 	working: boolean;
+	task: string;
 }
 
 interface Memory {

@@ -1,6 +1,6 @@
 const generateOptions = (originRoomName: string, role: string) => {
 	return {
-		memory: { originRoomName: originRoomName, role, working: false },
+		memory: { originRoomName: originRoomName, role, working: false, task: 'none' },
 	};
 };
 
