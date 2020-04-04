@@ -1,3 +1,5 @@
+import upgrade from './upgrade'
+
 const deposite = (creep: Creep) => {
 	let unfilledStructure = creep.pos.findClosestByPath(FIND_MY_STRUCTURES, {
 		filter: s =>
@@ -16,6 +18,8 @@ const deposite = (creep: Creep) => {
 			});
 		}
 		creep.transfer(unfilledStructure, RESOURCE_ENERGY);
+	} else{
+		upgrade(creep);
 	}
 
 	// finish condition

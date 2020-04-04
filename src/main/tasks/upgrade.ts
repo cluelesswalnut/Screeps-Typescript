@@ -11,6 +11,7 @@ const upgrade = (creep: Creep) => {
 		creep.upgradeController(controller);
 	}
 
+	// finish condition
 	if ( creep.carry.energy === 0)
 		creep.memory.task = 'none';
 
