@@ -1,4 +1,8 @@
-const originRoomNames: string[] = [`W7N7`];
+const spawns = Game.spawns;
+const originRoomNames : string[] = []
+for ( let spawn in spawns){
+	originRoomNames.push(spawns[spawn].room.name);
+}
 import roomOverlord from './roomOverlord';
 
 // Markus comment
