@@ -12,14 +12,12 @@ const getRoomLevel = (originRoomName: string) => {
 
 	let RCL : number = 0;
 
-	if ( roomEnergyCapacity <= 300){
+	if ( roomEnergyCapacity < 550){
 		RCL = 1;
-	} else if ( roomEnergyCapacity <= 550){
+	} else if ( roomEnergyCapacity < 800){
 		RCL = 2;
-	} else if ( roomEnergyCapacity <= 800){
-		RCL = 3;
 	} else {
-		RCL = 4;
+		RCL = 3;
 	}
 	return RCL;
 }
