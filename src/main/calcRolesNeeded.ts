@@ -6,7 +6,8 @@ const calcRolesNeeded = (RCL: number) => {
 		case 1:
 			roles = {
 				harvest: 4,
-				upgrade: 4,
+				upgrade: 2,
+				build: 2,
 			};
 			break;
 		case 2:
@@ -19,17 +20,17 @@ const calcRolesNeeded = (RCL: number) => {
 		case 3:
 			roles = {
 				mine: 1,
-				harvest: 4,
+				harvest: 2,
 				upgrade: 2,
-				build: 4,
+				build: 2,
 			};
 			break;
 		default:
 			roles = {
 				mine: 1,
-				harvest: 4,
+				harvest: 2,
 				upgrade: 2,
-				build: 4,
+				build: 2,
 			};
 			break;
 	}
