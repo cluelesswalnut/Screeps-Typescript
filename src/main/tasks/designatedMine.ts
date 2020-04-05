@@ -23,6 +23,7 @@ class DesignatedMine extends Task {
 			throw new Error(`DesignatedMine task creep missing container. Name: ${creep.name}.`);
 		};
 
+		// shouldn't really need to check if creep is on container. Should be there when this task is assigned.
 		if (!creep.pos.isEqualTo(container)) {
 			creep.moveTo(container, {
 				visualizePathStyle: {

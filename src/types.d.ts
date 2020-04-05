@@ -6,6 +6,7 @@ interface CreepMemory {
 	task: string;
 	source?: string;
 	container?: string;
+	constructionSite?: string;
 }
 
 interface Memory {
