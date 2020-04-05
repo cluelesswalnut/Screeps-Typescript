@@ -4,6 +4,8 @@ interface CreepMemory {
 	role: string;
 	working: boolean;
 	task: string;
+	source?: string;
+	container?: string;
 }
 
 interface Memory {
