@@ -1,4 +1,14 @@
 // memory extension samples
+
+interface SourcesMemory{
+	sourceId: string;
+	minerId: string | undefined;
+	containerId: string | undefined;
+}
+
+interface RoomMemory{
+	sources: SourcesMemory[];
+}
 interface CreepMemory {
 	originRoomName: string;
 	role: string;

@@ -41,3 +41,5 @@ class DesignatedMine extends Task {
 	}
 
 }
+
+export default DesignatedMine;

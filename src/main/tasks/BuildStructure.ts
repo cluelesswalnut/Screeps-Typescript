@@ -63,3 +63,5 @@ class BuildStructure extends Task {
 	}
 
 }
+
+export default BuildStructure;
